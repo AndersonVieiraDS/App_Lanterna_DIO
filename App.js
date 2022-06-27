@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, StyleSheet, Image } from 'react-native';
-import { Imagex } from './assets/Icons_Dio/eco-light-off.png'
+import {View, StyleSheet, Image } from 'react-native';
+import Imagex from './assets/Icons_Dio/eco-light-off.png'
 
 const App = () => {
   const toggle = true; //false
