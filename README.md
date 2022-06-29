@@ -10,7 +10,7 @@ Projeto criado através do Bootcamp Decola Tech 3a edição da Digital Inovation
 
 Em breve adicionarei um vídeo com meu celular provando a conclusão do projeto. Tive dificuldades porque estava usando o Expo Go e tive que compilar por um Eas.json e rodar num Dev-client.
 
-### Conteudo
+### Conteúdo
  - Libs react-native-shake react-native-torch
  - Stylesheet
  - Hook useState
