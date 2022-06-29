@@ -8,7 +8,11 @@ Projeto criado através do Bootcamp Decola Tech 3a edição da Digital Inovation
 
 ![Dio_white](https://user-images.githubusercontent.com/101853264/176347229-41a4ce57-ac96-4aed-a659-96136ddd1b41.jpg)
 
+--------------------------------------------------------------------
+
 Em breve adicionarei um vídeo com meu celular provando a conclusão do projeto. Tive dificuldades porque estava usando o Expo Go e tive que compilar por um Eas.json e rodar num Dev-client.
+
+https://user-images.githubusercontent.com/101853264/176429126-09c1748f-30b5-4e3d-8b75-06ba52721ef5.mp4
 
 ### Conteúdo
  - Libs react-native-shake react-native-torch
