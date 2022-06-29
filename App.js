@@ -24,7 +24,7 @@ const App = () => {
     // Essa função vai ser chamada quando o componente
     // for desmontado
     return () => subscription.remove();
-  }, []);
+  },);
 
   return (
     <View style={toggle ? style.containerLight : style.container}>
