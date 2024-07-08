@@ -9,26 +9,29 @@ const App = () => {
   const handleChangeToggle = () => setToggle(oldToggle => !oldToggle);
 
   useEffect(()=>{
-    // Liga flash do celular
+    // Liga/desliga o flash do celular
     Torch.switchState(toggle);
   }, [toggle]);
 
   useEffect(()=>{
     /**
-    * Quando o celular for chacoalhado, mudaremos o toggle
-    */
+     * Quando o celular for chacoalhado, mudaremos o toggle
+     */
     const subscription = RNShake.addListener(()=>{
       setToggle(oldToggle => !oldToggle);
     });
 
-    // Essa função vai ser chamada quando o componente
-    // for desmontado
+    // Essa função será chamada quando o componente for desmontado
     return () => subscription.remove();
-  },);
+  }, []);
 
   return (
     <View style={toggle ? style.containerLight : style.container}>
-      <TouchableOpacity onPress={handleChangeToggle}>
+      <TouchableOpacity
+        onPress={handleChangeToggle}
+        accessible={true}
+        accessibilityLabel="Toggle Flashlight"
+      >
         <Image
           style={toggle ? style.lightingOn : style.lightingOff}
           source={
@@ -37,16 +40,16 @@ const App = () => {
              : require('./assets/Icons_Dio/eco-light-off.png')
           } 
         />
-      <Image
-        style={style.logoDio}
-        source={
-          toggle
-           ? require('./assets/Icons_Dio/logo-dio.png')
-           : require('./assets/Icons_Dio/logo-dio-white.png')
-        }
-      />
-    </TouchableOpacity>
-  </View>
+        <Image
+          style={style.logoDio}
+          source={
+            toggle
+             ? require('./assets/Icons_Dio/logo-dio.png')
+             : require('./assets/Icons_Dio/logo-dio-white.png')
+          }
+        />
+      </TouchableOpacity>
+    </View>
   );
 };
 
